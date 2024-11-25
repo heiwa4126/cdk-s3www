@@ -22,3 +22,4 @@ pnpm run destroy
 - content-encoding は自動ではやってくれない
 - **ものすごく遅い** `aws s3 sync` のほうがいいんじゃないか
 - 削除用の lambda と role が生える
+- S3 にアップロードすることが頻繁にあるプロジェクトなら Terraform で書いた方がいいと思う。ファイルを 1 個、とか CDK で 1 発、をめざすならこっちの方が。
