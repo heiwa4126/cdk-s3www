@@ -6,3 +6,11 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+tmp/
+*.tmp
+*.tmp.*
+tmp.*
+
+layers/
+*.tgz

@@ -1,14 +1,24 @@
-# Welcome to your CDK TypeScript project
+# cdk-s3www
 
-This is a blank project for CDK development with TypeScript.
+AWS CDK で
+ランダムな名前の S3 バケットを作り、
+./www の中身をアップロードするサンプルコード。
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## 手順
 
-## Useful commands
+```sh
+pnpm i
+pnpm run deploy
+#
+pnpm run diff
+#
+pnpm run destroy
+```
 
-- `npm run build` compile typescript to js
-- `npm run watch` watch for changes and compile
-- `npm run test` perform the jest unit tests
-- `npx cdk deploy` deploy this stack to your default AWS account/region
-- `npx cdk diff` compare deployed stack with current state
-- `npx cdk synth` emits the synthesized CloudFormation template
+## 感想
+
+- 簡単に書ける
+- content-type や etag もちゃんとつけてくれる
+- content-encoding は自動ではやってくれない
+- **ものすごく遅い** `aws s3 sync` のほうがいいんじゃないか
+- 削除用の lambda と role が生える
