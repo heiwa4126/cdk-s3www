@@ -24,7 +24,7 @@ export class CdkS3WwwStack extends cdk.Stack {
 			destinationKeyPrefix: "", // optional prefix in the bucket
 		});
 
-		new cdk.CfnOutput(this, "BucketName", { value: bucket.bucketName });
+		// new cdk.CfnOutput(this, "BucketName", { value: bucket.bucketName });
 		new cdk.CfnOutput(this, "BucketURL", {
 			value: `https://${bucket.bucketRegionalDomainName}/index.html`,
 		});

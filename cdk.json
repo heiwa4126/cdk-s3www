@@ -1,6 +1,7 @@
 {
 	"app": "npx tsx bin/cdk-s3www.ts",
-	"_app": "npx ts-node --prefer-ts-exts bin/cdk-s3www.ts",
+	"app_": "bun run ./bin/cdk-s3www.ts",
+	"app__": "npx ts-node --prefer-ts-exts bin/cdk-s3www.ts",
 	"watch": {
 		"include": ["**"],
 		"exclude": [
