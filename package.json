@@ -5,28 +5,29 @@
 		"cdk-s3www": "bin/cdk-s3www.js"
 	},
 	"scripts": {
+		"preinstall": "pnpm audit",
 		"format": "biome format --write . && dprint fmt && textlint --fix \"**/*.md\"",
 		"check": "biome check --write . && dprint check",
-		"bootstrap": "cdk bootstrap",
-		"list": "cdk list",
-		"synth": "cdk synth",
-		"deploy": "cdk deploy --outputs-file outputs.tmp.json",
-		"deploy:hotswap": "cdk deploy --hotswap --outputs-file outputs.tmp.json",
-		"diff": "cdk diff",
-		"destroy": "cdk destroy"
+		"bootstrap": "NPM_CONFIG_LOGLEVEL=error cdk bootstrap",
+		"list": "NPM_CONFIG_LOGLEVEL=error cdk list",
+		"synth": "NPM_CONFIG_LOGLEVEL=error cdk synth",
+		"deploy": "NPM_CONFIG_LOGLEVEL=error cdk deploy --outputs-file outputs.tmp.json",
+		"deploy:hotswap": "NPM_CONFIG_LOGLEVEL=error cdk deploy --hotswap --outputs-file outputs.tmp.json",
+		"diff": "NPM_CONFIG_LOGLEVEL=error cdk diff",
+		"destroy": "NPM_CONFIG_LOGLEVEL=error cdk destroy"
 	},
 	"devDependencies": {
-		"@types/jest": "^29.5.14",
-		"@types/node": "22.7.9",
-		"aws-cdk": "2.170.0",
-		"jest": "^29.7.0",
-		"ts-jest": "^29.2.5",
+		"@types/jest": "^30.0.0",
+		"@types/node": "25.3.0",
+		"aws-cdk": "2.1107.0",
+		"jest": "^30.2.0",
+		"ts-jest": "^29.4.6",
 		"ts-node": "^10.9.2",
-		"tsx": "^4.19.2",
-		"typescript": "~5.6.3"
+		"tsx": "^4.21.0",
+		"typescript": "~5.9.3"
 	},
 	"dependencies": {
-		"aws-cdk-lib": "2.189.1",
-		"constructs": "^10.4.2"
+		"aws-cdk-lib": "2.240.0",
+		"constructs": "^10.5.1"
 	}
 }
