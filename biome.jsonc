@@ -4,25 +4,25 @@
 	"assist": {
 		"actions": {
 			"source": {
-				"organizeImports": "off"
-			}
-		}
+				"organizeImports": "off",
+			},
+		},
 	},
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
 		"useIgnoreFile": true,
-		"root": "."
+		"root": ".",
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**", "!**/*.html", "!**/*.htm"]
+		"includes": ["**", "!**/*.html", "!**/*.htm"],
 	},
 	"json": {
 		"parser": {
 			"allowComments": true,
-			"allowTrailingCommas": true
-		}
+			"allowTrailingCommas": true,
+		},
 	},
 	"linter": {
 		"enabled": true,
@@ -38,12 +38,12 @@
 				"noUnusedTemplateLiteral": "error",
 				"useNumberNamespace": "error",
 				"noInferrableTypes": "error",
-				"noUselessElse": "error"
-			}
-		}
+				"noUselessElse": "error",
+			},
+		},
 	},
 	"formatter": {
 		"enabled": true,
-		"lineWidth": 100
-	}
+		"lineWidth": 100,
+	},
 }
