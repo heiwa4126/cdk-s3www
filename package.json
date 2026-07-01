@@ -18,17 +18,17 @@
 		"destroy": "NPM_CONFIG_LOGLEVEL=error cdk destroy"
 	},
 	"dependencies": {
-		"aws-cdk-lib": "2.257.0",
+		"aws-cdk-lib": "2.260.0",
 		"constructs": "^10.6.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^30.0.0",
-		"@types/node": "25.9.1",
-		"aws-cdk": "2.1124.1",
+		"@types/node": "26.0.0",
+		"aws-cdk": "2.1128.1",
 		"jest": "^30.4.2",
 		"ts-jest": "^29.4.11",
 		"ts-node": "^10.9.2",
-		"tsx": "^4.22.3",
+		"tsx": "^4.22.4",
 		"typescript": "~6.0.3"
 	}
 }
