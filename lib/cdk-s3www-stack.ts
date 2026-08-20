@@ -15,18 +15,18 @@ export class CdkS3WwwStack extends cdk.Stack {
 			blockPublicAccess: s3.BlockPublicAccess.BLOCK_ACLS,
 			versioned: true,
 			encryption: s3.BucketEncryption.S3_MANAGED,
-			enforceSSL: true,
+			enforceSSL: true
 		});
 
 		new s3deploy.BucketDeployment(this, "DeployWebsite", {
 			sources: [s3deploy.Source.asset("www")],
 			destinationBucket: bucket,
-			destinationKeyPrefix: "", // optional prefix in the bucket
+			destinationKeyPrefix: "" // optional prefix in the bucket
 		});
 
 		// new cdk.CfnOutput(this, "BucketName", { value: bucket.bucketName });
 		new cdk.CfnOutput(this, "BucketURL", {
-			value: `https://${bucket.bucketRegionalDomainName}/index.html`,
+			value: `https://${bucket.bucketRegionalDomainName}/index.html`
 		});
 	}
 }
